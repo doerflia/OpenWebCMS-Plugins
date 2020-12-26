@@ -38,22 +38,4 @@ $().ready(function () {
         });
     });
 
-    $('.switch input').change(function () {
-        $input = $(this);
-        target = $input.data('target');
-        type = $input.data('type');
-
-        $fresh_table.fadeOut('fast', function () {
-
-            if ($input.is(':checked')) {
-                $fresh_table.removeClass("toolbar-color-" + current_color).addClass("full-color-" + current_color);
-                full_color = true;
-            } else {
-                $fresh_table.removeClass("full-color-" + current_color).addClass("toolbar-color-" + current_color);
-                full_color = false;
-            }
-
-            $fresh_table.fadeIn('fast');
-        });
-    });
 });
